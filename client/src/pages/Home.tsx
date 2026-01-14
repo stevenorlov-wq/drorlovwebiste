@@ -77,8 +77,8 @@ export default function Home() {
             {/* Left: Image */}
             <div className="order-2 md:order-1">
               <img
-                src="/images/dr-orlov-headshot.webp"
-                alt="Dr. Steven Orlov"
+                src="/images/dr-orlov-professional-headshot.jpg"
+                alt="Dr. Steven Orlov - Professional Headshot"
                 className="rounded-lg shadow-lg w-full max-w-sm mx-auto"
               />
             </div>
