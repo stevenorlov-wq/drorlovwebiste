@@ -190,6 +190,14 @@ export default function Home() {
                 fax: "888-825-15059",
                 hours: "Monday",
               },
+              {
+                name: "Burlington Clinic",
+                address: "2951 Walker's Line, 1st Floor",
+                city: "Burlington, ON L7M 4Y1",
+                phone: "1-833-962-5359",
+                fax: "888-825-15059",
+                hours: "Monday",
+              },
             ].map((location, idx) => (
               <Card key={idx} className="card-refined p-8">
                 <h3 className="text-lg font-bold text-primary mb-4">{location.name}</h3>
