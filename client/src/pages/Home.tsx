@@ -154,7 +154,7 @@ export default function Home() {
               {
                 icon: <Users className="w-8 h-8" />,
                 title: "Metabolic Disorders",
-                description: "Treatment of metabolic bone disease, hypogonadism, amenorrhea, and other endocrine conditions.",
+                description: "Management of obesity, osteoporosis, hypogonadism and other endocrine conditions.",
               },
             ].map((service, idx) => (
               <Card key={idx} className="card-refined p-8 text-center">
