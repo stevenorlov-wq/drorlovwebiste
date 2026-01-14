@@ -93,7 +93,7 @@ export default function Home() {
               </div>
 
               <p className="text-foreground leading-relaxed text-lg">
-                Welcome to my practice. I specialize in the diagnosis and management of endocrine disorders, with particular expertise in diabetes, thyroid disease, and metabolic bone disease. My goal is to provide comprehensive, evidence-based care tailored to each patient's unique needs.
+                Welcome to my practice. I specialize in the diagnosis and management of endocrine disorders, with particular expertise in diabetes, thyroid disease, and metabolic diseases. My goal is to provide comprehensive, evidence-based care tailored to each patient's unique needs.
               </p>
 
               <div className="flex gap-4 pt-4">
