@@ -184,14 +184,6 @@ export default function Home() {
               },
               {
                 name: "Wharton Medical Clinic",
-                address: "658 Danforth Ave, Suite 402",
-                city: "Toronto, ON M4J 5B9",
-                phone: "1-833-962-5359",
-                fax: "888-825-15059",
-                hours: "Monday",
-              },
-              {
-                name: "Burlington Clinic",
                 address: "2951 Walker's Line, 1st Floor",
                 city: "Burlington, ON L7M 4Y1",
                 phone: "1-833-962-5359",
