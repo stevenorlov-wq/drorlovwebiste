@@ -97,7 +97,7 @@ export default function Home() {
               </p>
 
               <div className="flex gap-4 pt-4">
-                <Button className="btn-primary">Request Appointment</Button>
+                <Button className="btn-primary">Contact the Office</Button>
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary/5">
                   Learn More
                 </Button>
@@ -220,9 +220,9 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="section-padding gradient-overlay">
         <div className="container max-w-2xl">
-          <h2 className="text-primary mb-4 text-center">Request an Appointment</h2>
+          <h2 className="text-primary mb-4 text-center">Contact the Office</h2>
           <p className="text-center text-foreground mb-12">
-            Please fill out the form below to request an appointment. We will contact you to confirm.
+            Please fill out the form below to contact our office. We will get back to you shortly.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
