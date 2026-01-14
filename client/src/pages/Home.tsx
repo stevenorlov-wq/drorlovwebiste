@@ -97,10 +97,14 @@ export default function Home() {
               </p>
 
               <div className="flex gap-4 pt-4">
-                <Button className="btn-primary">Contact the Office</Button>
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary/5">
-                  Learn More
-                </Button>
+                <a href="#contact" className="inline-block">
+                  <Button className="btn-primary">Contact the Office</Button>
+                </a>
+                <a href="#about" className="inline-block">
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary/5">
+                    Learn More
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
