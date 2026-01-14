@@ -172,7 +172,7 @@ export default function Home() {
         <div className="container">
           <h2 className="text-primary mb-12 text-center">Clinic Locations</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-12">
             {[
               {
                 name: "Polyclinic Specialty Medicine Clinic",
@@ -181,6 +181,7 @@ export default function Home() {
                 phone: "416-222-6160 x269",
                 fax: "416-645-1978",
                 hours: "Tuesday, Thursday, Friday",
+                mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.5234567890123!2d-79.4!3d43.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d5b5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2s2%20Champagne%20Dr%2C%20Toronto%2C%20ON%20M3J%202C5!5e0!3m2!1sen!2sca!4v1234567890",
               },
               {
                 name: "Wharton Medical Clinic",
@@ -189,29 +190,43 @@ export default function Home() {
                 phone: "1-833-962-5359",
                 fax: "888-825-15059",
                 hours: "Monday",
+                mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.5234567890123!2d-79.8!3d43.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d5b5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2s2951%20Walker's%20Line%2C%20Burlington%2C%20ON%20L7M%204Y1!5e0!3m2!1sen!2sca!4v1234567890",
               },
             ].map((location, idx) => (
-              <Card key={idx} className="card-refined p-8">
-                <h3 className="text-lg font-bold text-primary mb-4">{location.name}</h3>
-                <div className="space-y-3 text-foreground text-sm">
-                  <div className="flex gap-3">
-                    <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p>{location.address}</p>
-                      <p>{location.city}</p>
+              <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <Card className="card-refined p-8">
+                  <h3 className="text-lg font-bold text-primary mb-4">{location.name}</h3>
+                  <div className="space-y-3 text-foreground text-sm">
+                    <div className="flex gap-3">
+                      <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p>{location.address}</p>
+                        <p>{location.city}</p>
+                      </div>
                     </div>
+                    <div className="flex gap-3">
+                      <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
+                      <p>{location.phone}</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
+                      <p>Fax: {location.fax}</p>
+                    </div>
+                    <p className="pt-2 font-medium text-primary">Appointments: {location.hours}</p>
                   </div>
-                  <div className="flex gap-3">
-                    <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
-                    <p>{location.phone}</p>
-                  </div>
-                  <div className="flex gap-3">
-                    <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
-                    <p>Fax: {location.fax}</p>
-                  </div>
-                  <p className="pt-2 font-medium text-primary">Appointments: {location.hours}</p>
+                </Card>
+                <div className="card-refined overflow-hidden rounded-lg h-80">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src={location.mapUrl}
+                  />
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
