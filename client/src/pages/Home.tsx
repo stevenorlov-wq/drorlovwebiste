@@ -362,7 +362,7 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-bold mb-2">Contact</h4>
-              <p className="text-sm">Polyclinic: 416-222-6160</p>
+              <p className="text-sm">Polyclinic: 416-222-6160 ext 269</p>
               <p className="text-sm">Wharton: 1-833-962-5359</p>
             </div>
           </div>
