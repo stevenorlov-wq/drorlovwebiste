@@ -66,6 +66,9 @@ export default function Home() {
             <a href="#contact" className="text-foreground hover:text-primary transition-colors text-sm">
               Contact
             </a>
+            <a href="#handouts" className="text-foreground hover:text-primary transition-colors text-sm">
+              Handouts
+            </a>
           </div>
         </div>
       </nav>
@@ -347,6 +350,278 @@ export default function Home() {
               * Indicates required field
             </p>
           </form>
+        </div>
+      </section>
+
+      {/* Patient Handouts Section */}
+      <section id="handouts" className="section-padding bg-white">
+        <div className="container">
+          <h2 className="text-primary mb-12 text-center">Patient Handouts</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Download and print educational materials about common endocrine conditions and management strategies.
+          </p>
+
+          {/* English Handouts */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-primary mb-8 pb-4 border-b-2 border-secondary">English Handouts</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Diabetes Management */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Diabetes Management</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/diabetes_english_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 1</span>
+                  </a>
+                  <a
+                    href="/images/diabetes_english_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 2</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Obesity Management */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Obesity Management</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/obesity_management_english_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 1</span>
+                  </a>
+                  <a
+                    href="/images/obesity_management_english_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 2</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Osteoporosis Management */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Osteoporosis Management</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/osteoporosis_english_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 1</span>
+                  </a>
+                  <a
+                    href="/images/osteoporosis_english_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 2</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Portfolio Diet */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Portfolio Diet</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/portfolio_diet_english_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 1</span>
+                  </a>
+                  <a
+                    href="/images/portfolio_diet_english_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 2</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Statin Poster */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Statin Therapy (Canadian)</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/statin_poster_canadian_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 1</span>
+                  </a>
+                  <a
+                    href="/images/statin_poster_canadian_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Page 2</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Russian Handouts */}
+          <div>
+            <h3 className="text-2xl font-bold text-primary mb-8 pb-4 border-b-2 border-secondary">Russian Handouts</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Diabetes Management - Russian */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Управление диабетом</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/diabetes_russian_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 1</span>
+                  </a>
+                  <a
+                    href="/images/diabetes_russian_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 2</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Obesity Management - Russian */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Управление ожирением</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/obesity_management_russian_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 1</span>
+                  </a>
+                  <a
+                    href="/images/obesity_management_russian_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 2</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Osteoporosis Management - Russian */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Управление остеопорозом</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/osteoporosis_russian_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 1</span>
+                  </a>
+                  <a
+                    href="/images/osteoporosis_russian_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 2</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Portfolio Diet - Russian */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Портфельная диета</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/portfolio_diet_russian_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 1</span>
+                  </a>
+                  <a
+                    href="/images/portfolio_diet_russian_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 2</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Statin Poster - Russian */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Статин-терапия</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/statin_poster_russian_page1.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 1</span>
+                  </a>
+                  <a
+                    href="/images/statin_poster_russian_page2.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Страница 2</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
