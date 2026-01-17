@@ -376,7 +376,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 1</span>
+                    <span>ABCDEs of Diabetes Care</span>
                   </a>
                   <a
                     href="/images/diabetes_english_page2.png"
@@ -385,7 +385,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 2</span>
+                    <span>Hypoglycemia</span>
                   </a>
                 </div>
               </div>
@@ -401,7 +401,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 1</span>
+                    <span>Obesity Diagnosis and Medications</span>
                   </a>
                   <a
                     href="/images/obesity_management_english_page2.png"
@@ -410,7 +410,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 2</span>
+                    <span>Bariatric Surgery</span>
                   </a>
                 </div>
               </div>
