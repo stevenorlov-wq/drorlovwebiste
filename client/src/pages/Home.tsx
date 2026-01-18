@@ -467,7 +467,7 @@ export default function Home() {
 
               {/* Statin Poster */}
               <div className="card-refined p-6">
-                <h4 className="text-lg font-bold text-primary mb-4">Statin Therapy (Canadian)</h4>
+                <h4 className="text-lg font-bold text-primary mb-4">Dyslipidemia</h4>
                 <div className="space-y-3">
                   <a
                     href="/images/statin_poster_canadian_page1.png"
