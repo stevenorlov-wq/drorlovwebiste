@@ -507,7 +507,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 1</span>
+                    <span>ABCDE диабета</span>
                   </a>
                   <a
                     href="/images/diabetes_russian_page2.png"
@@ -516,7 +516,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 2</span>
+                    <span>Гипогликемия</span>
                   </a>
                 </div>
               </div>
@@ -532,7 +532,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 1</span>
+                    <span>Диагностика и лекарства</span>
                   </a>
                   <a
                     href="/images/obesity_management_russian_page2.png"
@@ -541,7 +541,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 2</span>
+                    <span>Бариатрическая хирургия</span>
                   </a>
                 </div>
               </div>
@@ -557,7 +557,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 1</span>
+                    <span>Диагностика и образ жизни</span>
                   </a>
                   <a
                     href="/images/osteoporosis_russian_page2.png"
@@ -566,7 +566,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 2</span>
+                    <span>Лекарства</span>
                   </a>
                 </div>
               </div>
@@ -582,7 +582,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 1</span>
+                    <span>Четыре основных компонента</span>
                   </a>
                   <a
                     href="/images/portfolio_diet_russian_page2.png"
@@ -591,7 +591,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 2</span>
+                    <span>Портфельная диета</span>
                   </a>
                 </div>
               </div>
@@ -607,7 +607,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 1</span>
+                    <span>Мифы о статинах</span>
                   </a>
                   <a
                     href="/images/statin_poster_russian_page2.png"
@@ -616,7 +616,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Страница 2</span>
+                    <span>Механизм действия статинов</span>
                   </a>
                 </div>
               </div>
