@@ -256,7 +256,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Diabetes Management</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/diabetes_english_page1.png"
+                    href="/images/diabetes_english_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -265,7 +265,7 @@ export default function Home() {
                     <span>ABCDEs of Diabetes Care</span>
                   </a>
                   <a
-                    href="/images/diabetes_english_page2.png"
+                    href="/images/diabetes_english_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -281,7 +281,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Obesity Management</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/obesity_management_english_page1.png"
+                    href="/images/obesity_management_english_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -290,7 +290,7 @@ export default function Home() {
                     <span>Obesity Diagnosis and Medications</span>
                   </a>
                   <a
-                    href="/images/obesity_management_english_page2.png"
+                    href="/images/obesity_management_english_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -306,7 +306,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Osteoporosis Management</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/osteoporosis_english_page1.png"
+                    href="/images/osteoporosis_english_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -315,7 +315,7 @@ export default function Home() {
                     <span>Diagnosis & Lifestyle</span>
                   </a>
                   <a
-                    href="/images/osteoporosis_english_page2.png"
+                    href="/images/osteoporosis_english_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -331,7 +331,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Portfolio Diet</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/portfolio_diet_english_page1.png"
+                    href="/images/portfolio_diet_english_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -340,7 +340,7 @@ export default function Home() {
                     <span>Core Four Components</span>
                   </a>
                   <a
-                    href="/images/portfolio_diet_english_page2.png"
+                    href="/images/portfolio_diet_english_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -356,7 +356,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Dyslipidemia</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/statin_poster_canadian_page1.png"
+                    href="/images/statin_poster_canadian_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -365,7 +365,7 @@ export default function Home() {
                     <span>Statin Myths</span>
                   </a>
                   <a
-                    href="/images/statin_poster_canadian_page2.png"
+                    href="/images/statin_poster_canadian_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -387,7 +387,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Управление диабетом</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/diabetes_russian_page1.png"
+                    href="/images/diabetes_russian_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -396,7 +396,7 @@ export default function Home() {
                     <span>ABCDE диабета</span>
                   </a>
                   <a
-                    href="/images/diabetes_russian_page2.png"
+                    href="/images/diabetes_russian_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -412,7 +412,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Управление ожирением</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/obesity_management_russian_page1.png"
+                    href="/images/obesity_management_russian_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -421,7 +421,7 @@ export default function Home() {
                     <span>Диагностика и лекарства</span>
                   </a>
                   <a
-                    href="/images/obesity_management_russian_page2.png"
+                    href="/images/obesity_management_russian_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -437,7 +437,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Управление остеопорозом</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/osteoporosis_russian_page1.png"
+                    href="/images/osteoporosis_russian_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -446,7 +446,7 @@ export default function Home() {
                     <span>Диагностика и образ жизни</span>
                   </a>
                   <a
-                    href="/images/osteoporosis_russian_page2.png"
+                    href="/images/osteoporosis_russian_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -462,7 +462,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Портфельная диета</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/portfolio_diet_russian_page1.png"
+                    href="/images/portfolio_diet_russian_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -471,7 +471,7 @@ export default function Home() {
                     <span>Четыре основных компонента</span>
                   </a>
                   <a
-                    href="/images/portfolio_diet_russian_page2.png"
+                    href="/images/portfolio_diet_russian_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -487,7 +487,7 @@ export default function Home() {
                 <h4 className="text-lg font-bold text-primary mb-4">Статин-терапия</h4>
                 <div className="space-y-3">
                   <a
-                    href="/images/statin_poster_russian_page1.png"
+                    href="/images/statin_poster_russian_page1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
@@ -496,7 +496,7 @@ export default function Home() {
                     <span>Мифы о статинах</span>
                   </a>
                   <a
-                    href="/images/statin_poster_russian_page2.png"
+                    href="/images/statin_poster_russian_page2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
