@@ -63,11 +63,11 @@ export default function Home() {
             <a href="#locations" className="text-foreground hover:text-primary transition-colors text-sm">
               Locations
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors text-sm">
-              Contact
-            </a>
             <a href="#handouts" className="text-foreground hover:text-primary transition-colors text-sm">
               Handouts
+            </a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors text-sm">
+              Contact
             </a>
           </div>
         </div>
@@ -236,120 +236,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="section-padding gradient-overlay">
-        <div className="container max-w-2xl">
-          <h2 className="text-primary mb-4 text-center">Contact the Office</h2>
-          <p className="text-center text-foreground mb-12">
-            Please fill out the form below to contact our office. We will get back to you shortly.
-          </p>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name Fields */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">First Name *</label>
-                <input
-                  type="text"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Last Name *</label>
-                <input
-                  type="text"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-            </div>
-
-            {/* Email & Phone */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Phone Number *</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-            </div>
-
-            {/* Physician Referral */}
-            <div>
-              <label className="flex items-center gap-3 text-foreground">
-                <input
-                  type="checkbox"
-                  name="referredByPhysician"
-                  checked={formData.referredByPhysician}
-                  onChange={handleInputChange}
-                  className="w-4 h-4 rounded border-border"
-                />
-                <span className="text-sm">A physician has referred me to see Dr. Orlov *</span>
-              </label>
-            </div>
-
-            {/* Location Preference */}
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">Preferred Location *</label>
-              <select
-                name="preferredLocation"
-                value={formData.preferredLocation}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              >
-                <option value="polyclinic">Polyclinic - North York</option>
-                <option value="wharton">Wharton Medical Clinic</option>
-              </select>
-            </div>
-
-            {/* Comments */}
-            <div>
-              <label className="block text-sm font-medium text-foreground mb-2">Additional Comments</label>
-              <textarea
-                name="comment"
-                value={formData.comment}
-                onChange={handleInputChange}
-                rows={4}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Please provide any additional information..."
-              />
-            </div>
-
-            {/* Submit Button */}
-            <Button type="submit" className="btn-primary w-full">
-              Submit Request
-            </Button>
-
-            <p className="text-xs text-muted-foreground text-center">
-              * Indicates required field
-            </p>
-          </form>
         </div>
       </section>
 
@@ -622,6 +508,120 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="section-padding gradient-overlay">
+        <div className="container max-w-2xl">
+          <h2 className="text-primary mb-4 text-center">Contact the Office</h2>
+          <p className="text-center text-foreground mb-12">
+            Please fill out the form below to contact our office. We will get back to you shortly.
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name Fields */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">First Name *</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Last Name *</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+            </div>
+
+            {/* Email & Phone */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Phone Number *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+              </div>
+            </div>
+
+            {/* Physician Referral */}
+            <div>
+              <label className="flex items-center gap-3 text-foreground">
+                <input
+                  type="checkbox"
+                  name="referredByPhysician"
+                  checked={formData.referredByPhysician}
+                  onChange={handleInputChange}
+                  className="w-4 h-4 rounded border-border"
+                />
+                <span className="text-sm">A physician has referred me to see Dr. Orlov *</span>
+              </label>
+            </div>
+
+            {/* Location Preference */}
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Preferred Location *</label>
+              <select
+                name="preferredLocation"
+                value={formData.preferredLocation}
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              >
+                <option value="polyclinic">Polyclinic - North York</option>
+                <option value="wharton">Wharton Medical Clinic</option>
+              </select>
+            </div>
+
+            {/* Comments */}
+            <div>
+              <label className="block text-sm font-medium text-foreground mb-2">Additional Comments</label>
+              <textarea
+                name="comment"
+                value={formData.comment}
+                onChange={handleInputChange}
+                rows={4}
+                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="Please provide any additional information..."
+              />
+            </div>
+
+            {/* Submit Button */}
+            <Button type="submit" className="btn-primary w-full">
+              Submit Request
+            </Button>
+
+            <p className="text-xs text-muted-foreground text-center">
+              * Indicates required field
+            </p>
+          </form>
         </div>
       </section>
 
