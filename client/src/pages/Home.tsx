@@ -426,7 +426,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 1</span>
+                    <span>Diagnosis & Lifestyle</span>
                   </a>
                   <a
                     href="/images/osteoporosis_english_page2.png"
@@ -435,7 +435,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 2</span>
+                    <span>Medications</span>
                   </a>
                 </div>
               </div>
@@ -451,7 +451,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 1</span>
+                    <span>Core Four Components</span>
                   </a>
                   <a
                     href="/images/portfolio_diet_english_page2.png"
@@ -460,7 +460,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 2</span>
+                    <span>Portfolio Diet</span>
                   </a>
                 </div>
               </div>
@@ -476,7 +476,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 1</span>
+                    <span>Statin Myths</span>
                   </a>
                   <a
                     href="/images/statin_poster_canadian_page2.png"
@@ -485,7 +485,7 @@ export default function Home() {
                     className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Page 2</span>
+                    <span>Statin Mechanisms</span>
                   </a>
                 </div>
               </div>
