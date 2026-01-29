@@ -553,7 +553,7 @@ export default function Home() {
             {/* Name Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">First Name *</label>
+                <label className="block text-sm font-medium text-foreground mb-2">First Name</label>
                 <input
                   type="text"
                   name="firstName"
@@ -564,7 +564,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Last Name *</label>
+                <label className="block text-sm font-medium text-foreground mb-2">Last Name</label>
                 <input
                   type="text"
                   name="lastName"
@@ -590,7 +590,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Phone Number *</label>
+                <label className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
                 <input
                   type="tel"
                   name="phone"
@@ -612,13 +612,13 @@ export default function Home() {
                   onChange={handleInputChange}
                   className="w-4 h-4 rounded border-border"
                 />
-                <span className="text-sm">A physician has referred me to see Dr. Orlov *</span>
+                <span className="text-sm">A physician has referred me to see Dr. Orlov</span>
               </label>
             </div>
 
             {/* Location Preference */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">Preferred Location *</label>
+              <label className="block text-sm font-medium text-foreground mb-2">Preferred Location</label>
               <select
                 name="preferredLocation"
                 value={formData.preferredLocation}
@@ -693,7 +693,7 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-bold mb-2">Contact</h4>
-              <p className="text-sm">Polyclinic: 416-222-6160 ext 269</p>
+              <p className="text-sm">Polyclinic: 416-222-6160 ext 268</p>
               <p className="text-sm">Wharton: 1-833-962-5359</p>
             </div>
           </div>
