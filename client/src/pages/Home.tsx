@@ -1,7 +1,10 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Award, BookOpen, Users } from "lucide-react";
+import { Mail, Phone, MapPin, Award, BookOpen, Users, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 
 /**
  * Dr. Orlov Professional Website - Modern Medical Minimalism
@@ -11,7 +14,17 @@ import { useState } from "react";
  */
 
 export default function Home() {
-  const [formData, setFormData] = useState({
+  const { user, loading, error, isAuthenticated, logout } = useAuth();
+
+  const [formData, setFormData] = useState<{
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    referredByPhysician: boolean;
+    preferredLocation: "polyclinic" | "wharton";
+    comment: string;
+  }>({
     firstName: "",
     lastName: "",
     email: "",
@@ -36,10 +49,27 @@ export default function Home() {
     }
   };
 
+  const contactMutation = trpc.contact.submitForm.useMutation({
+    onSuccess: () => {
+      toast.success("Thank you! We will contact you shortly.");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        referredByPhysician: false,
+        preferredLocation: "polyclinic",
+        comment: "",
+      });
+    },
+    onError: (error) => {
+      toast.error(error.message || "Failed to submit form. Please try again.");
+    },
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log("Form submitted:", formData);
+    contactMutation.mutate(formData);
   };
 
   return (
@@ -126,7 +156,7 @@ export default function Home() {
               </p>
 
               <p>
-                His clinical expertise spans diabetes management, thyroid disorders, metabolic bone disease, and other general endocrine conditions. Dr. Orlov works collaboratively with diabetes nurse educators and other specialists to provide integrated, patient-centered care.
+                His clinical expertise spans diabetes management, thyroid disorders, metabolic diseases, and other general endocrine conditions. Dr. Orlov works collaboratively with diabetes nurse educators and other specialists to provide integrated, patient-centered care.
               </p>
 
               <p>
@@ -614,8 +644,15 @@ export default function Home() {
             </div>
 
             {/* Submit Button */}
-            <Button type="submit" className="btn-primary w-full">
-              Submit Request
+            <Button type="submit" className="btn-primary w-full" disabled={contactMutation.isPending}>
+              {contactMutation.isPending ? (
+                <>
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  Submitting...
+                </>
+              ) : (
+                "Submit Request"
+              )}
             </Button>
 
             <p className="text-xs text-muted-foreground text-center">
