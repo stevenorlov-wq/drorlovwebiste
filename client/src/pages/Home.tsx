@@ -381,7 +381,21 @@ export default function Home() {
                 </div>
               </div>
 
-
+              {/* Dyslipidemia */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Dyslipidemia</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/statin_poster_canadian_page2.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Statin Mechanisms</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -489,6 +503,21 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Dyslipidemia - Russian */}
+              <div className="card-refined p-6">
+                <h4 className="text-lg font-bold text-primary mb-4">Дислипидемия</h4>
+                <div className="space-y-3">
+                  <a
+                    href="/images/statin_poster_russian_page2.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
+                  >
+                    <BookOpen className="w-5 h-5" />
+                    <span>Механизм действия статинов</span>
+                  </a>
+                </div>
+              </div>
 
             </div>
           </div>
