@@ -110,7 +110,7 @@ export default function Home() {
             {/* Left: Image */}
             <div className="order-2 md:order-1">
               <img
-                src="/images/dr-orlov-professional-headshot.jpg"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663289042912/MptYYYNELrfwLUUw.jpg"
                 alt="Dr. Steven Orlov - Professional Headshot"
                 className="rounded-lg shadow-lg w-full max-w-sm mx-auto"
               />
@@ -381,30 +381,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Statin Poster */}
-              <div className="card-refined p-6">
-                <h4 className="text-lg font-bold text-primary mb-4">Dyslipidemia</h4>
-                <div className="space-y-3">
-                  <a
-                    href="/images/statin_poster_canadian_page1.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
-                  >
-                    <BookOpen className="w-5 h-5" />
-                    <span>Statin Myths</span>
-                  </a>
-                  <a
-                    href="/images/statin_poster_canadian_page2.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
-                  >
-                    <BookOpen className="w-5 h-5" />
-                    <span>Statin Mechanisms</span>
-                  </a>
-                </div>
-              </div>
+
             </div>
           </div>
 
@@ -512,30 +489,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Statin Poster - Russian */}
-              <div className="card-refined p-6">
-                <h4 className="text-lg font-bold text-primary mb-4">Статин-терапия</h4>
-                <div className="space-y-3">
-                  <a
-                    href="/images/statin_poster_russian_page1.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
-                  >
-                    <BookOpen className="w-5 h-5" />
-                    <span>Мифы о статинах</span>
-                  </a>
-                  <a
-                    href="/images/statin_poster_russian_page2.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-primary hover:text-secondary transition-colors"
-                  >
-                    <BookOpen className="w-5 h-5" />
-                    <span>Механизм действия статинов</span>
-                  </a>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
