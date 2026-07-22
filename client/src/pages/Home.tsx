@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Award, BookOpen, Users } from "lucide-react";
+import { Mail, Phone, MapPin, Award, BookOpen, Users, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
 const CONTACT_EMAIL = "drorlov@drorlov.com";
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 /**
  * Dr. Orlov Professional Website - Modern Medical Minimalism
@@ -31,6 +32,7 @@ export default function Home() {
     preferredLocation: "polyclinic",
     comment: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
@@ -47,7 +49,7 @@ export default function Home() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const locationName =
@@ -58,21 +60,44 @@ export default function Home() {
       ? "Yes, referred by physician"
       : "No physician referral";
 
-    const subject = `New contact request from ${formData.firstName} ${formData.lastName}`;
-    const body = [
-      `Name: ${formData.firstName} ${formData.lastName}`,
-      `Email: ${formData.email}`,
-      `Phone: ${formData.phone}`,
-      `Preferred Location: ${locationName}`,
-      `Physician Referral: ${referralStatus}`,
-      "",
-      "Additional Comments:",
-      formData.comment || "(No additional comments provided)",
-    ].join("\n");
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `New contact request from ${formData.firstName} ${formData.lastName}`,
+          Name: `${formData.firstName} ${formData.lastName}`,
+          Email: formData.email,
+          Phone: formData.phone,
+          "Preferred Location": locationName,
+          "Physician Referral": referralStatus,
+          "Additional Comments": formData.comment || "(No additional comments provided)",
+        }),
+      });
 
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
 
-    toast.success("Opening your email app to send this request...");
+      toast.success("Thank you! We will contact you shortly.");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        referredByPhysician: false,
+        preferredLocation: "polyclinic",
+        comment: "",
+      });
+    } catch (error) {
+      toast.error("Failed to submit form. Please try again or call the office directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -630,8 +655,15 @@ export default function Home() {
             </div>
 
             {/* Submit Button */}
-            <Button type="submit" className="btn-primary w-full">
-              Submit Request
+            <Button type="submit" className="btn-primary w-full" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  Submitting...
+                </>
+              ) : (
+                "Submit Request"
+              )}
             </Button>
 
             <p className="text-xs text-muted-foreground text-center">
