@@ -1,10 +1,10 @@
-import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Award, BookOpen, Users, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Award, BookOpen, Users } from "lucide-react";
 import { useState } from "react";
-import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
+
+const CONTACT_EMAIL = "drorlov@drorlov.com";
 
 /**
  * Dr. Orlov Professional Website - Modern Medical Minimalism
@@ -14,8 +14,6 @@ import { toast } from "sonner";
  */
 
 export default function Home() {
-  const { user, loading, error, isAuthenticated, logout } = useAuth();
-
   const [formData, setFormData] = useState<{
     firstName: string;
     lastName: string;
@@ -49,27 +47,32 @@ export default function Home() {
     }
   };
 
-  const contactMutation = trpc.contact.submitForm.useMutation({
-    onSuccess: () => {
-      toast.success("Thank you! We will contact you shortly.");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        referredByPhysician: false,
-        preferredLocation: "polyclinic",
-        comment: "",
-      });
-    },
-    onError: (error) => {
-      toast.error(error.message || "Failed to submit form. Please try again.");
-    },
-  });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    contactMutation.mutate(formData);
+
+    const locationName =
+      formData.preferredLocation === "polyclinic"
+        ? "Polyclinic - North York"
+        : "Wharton Medical Clinic";
+    const referralStatus = formData.referredByPhysician
+      ? "Yes, referred by physician"
+      : "No physician referral";
+
+    const subject = `New contact request from ${formData.firstName} ${formData.lastName}`;
+    const body = [
+      `Name: ${formData.firstName} ${formData.lastName}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      `Preferred Location: ${locationName}`,
+      `Physician Referral: ${referralStatus}`,
+      "",
+      "Additional Comments:",
+      formData.comment || "(No additional comments provided)",
+    ].join("\n");
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    toast.success("Opening your email app to send this request...");
   };
 
   return (
@@ -110,7 +113,7 @@ export default function Home() {
             {/* Left: Image */}
             <div className="order-2 md:order-1">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663289042912/MptYYYNELrfwLUUw.jpg"
+                src="/images/dr-orlov-headshot.webp"
                 alt="Dr. Steven Orlov - Professional Headshot"
                 className="rounded-lg shadow-lg w-full max-w-sm mx-auto"
               />
@@ -627,15 +630,8 @@ export default function Home() {
             </div>
 
             {/* Submit Button */}
-            <Button type="submit" className="btn-primary w-full" disabled={contactMutation.isPending}>
-              {contactMutation.isPending ? (
-                <>
-                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                  Submitting...
-                </>
-              ) : (
-                "Submit Request"
-              )}
+            <Button type="submit" className="btn-primary w-full">
+              Submit Request
             </Button>
 
             <p className="text-xs text-muted-foreground text-center">
