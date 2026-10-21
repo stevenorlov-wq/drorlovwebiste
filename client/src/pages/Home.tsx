@@ -243,7 +243,7 @@ export default function Home() {
                 name: "Polyclinic Specialty Medicine Clinic",
                 address: "2 Champagne Dr, Unit B17",
                 city: "Toronto, ON M3J 2C5",
-                phone: "416-222-6160 x269",
+                phone: "416-222-6160 x268",
                 fax: "416-645-1978",
                 hours: "Tuesday, Thursday, Friday",
                 mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.5234567890123!2d-79.4!3d43.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d5b5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2s2%20Champagne%20Dr%2C%20Toronto%2C%20ON%20M3J%202C5!5e0!3m2!1sen!2sca!4v1234567890",
