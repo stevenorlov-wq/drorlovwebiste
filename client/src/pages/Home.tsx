@@ -7,6 +7,66 @@ import { toast } from "sonner";
 const CONTACT_EMAIL = "drorlov@drorlov.com";
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
+// Search engines (and tel: links) can't reliably parse a phone number with an
+// extension, so each location carries a clean, extension-free number for
+// machine-readable use (telHref, JSON-LD) alongside the human-readable
+// display string that still shows the extension.
+const CLINIC_LOCATIONS = [
+  {
+    name: "Polyclinic Specialty Medicine Clinic",
+    address: "2 Champagne Dr, Unit B17",
+    city: "Toronto, ON M3J 2C5",
+    phone: "416-222-6160 x268",
+    telHref: "tel:+14162226160",
+    cleanPhone: "+1-416-222-6160",
+    fax: "416-645-1978",
+    hours: "Tuesday, Thursday, Friday",
+    mapUrl: "https://www.google.com/maps?q=2+Champagne+Dr,+Unit+B17,+Toronto,+ON+M3J+2C5&output=embed",
+    structuredAddress: {
+      streetAddress: "2 Champagne Dr, Unit B17",
+      addressLocality: "Toronto",
+      addressRegion: "ON",
+      postalCode: "M3J 2C5",
+    },
+  },
+  {
+    name: "Wharton Medical Clinic",
+    address: "414 Victoria Ave North, Suite M11",
+    city: "Hamilton, ON L8L 5G8",
+    phone: "1-833-962-5359",
+    telHref: "tel:+18339625359",
+    cleanPhone: "+1-833-962-5359",
+    fax: "888-825-15059",
+    hours: "Monday",
+    mapUrl: "https://www.google.com/maps?q=414+Victoria+Ave+North,+Suite+M11,+Hamilton,+ON+L8L+5G8&output=embed",
+    structuredAddress: {
+      streetAddress: "414 Victoria Ave North, Suite M11",
+      addressLocality: "Hamilton",
+      addressRegion: "ON",
+      postalCode: "L8L 5G8",
+    },
+  },
+];
+
+const CLINIC_STRUCTURED_DATA = CLINIC_LOCATIONS.map((location) => ({
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: location.name,
+  telephone: location.cleanPhone,
+  faxNumber: location.fax,
+  medicalSpecialty: "Endocrinology",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "CA",
+    ...location.structuredAddress,
+  },
+  physician: {
+    "@type": "Physician",
+    name: "Dr. Steven Orlov",
+    medicalSpecialty: "Endocrinology",
+  },
+}));
+
 /**
  * Dr. Orlov Professional Website - Modern Medical Minimalism
  * Design Philosophy: Clinical clarity, accessible sophistication, content-first
@@ -237,27 +297,12 @@ export default function Home() {
         <div className="container">
           <h2 className="text-primary mb-12 text-center">Clinic Locations</h2>
 
+          <script type="application/ld+json">
+            {JSON.stringify(CLINIC_STRUCTURED_DATA)}
+          </script>
+
           <div className="space-y-12">
-            {[
-              {
-                name: "Polyclinic Specialty Medicine Clinic",
-                address: "2 Champagne Dr, Unit B17",
-                city: "Toronto, ON M3J 2C5",
-                phone: "416-222-6160 x268",
-                fax: "416-645-1978",
-                hours: "Tuesday, Thursday, Friday",
-                mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.5234567890123!2d-79.4!3d43.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d5b5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2s2%20Champagne%20Dr%2C%20Toronto%2C%20ON%20M3J%202C5!5e0!3m2!1sen!2sca!4v1234567890",
-              },
-              {
-                name: "Wharton Medical Clinic",
-                address: "414 Victoria Ave North, Suite M11",
-                city: "Hamilton, ON L8L 5G8",
-                phone: "1-833-962-5359",
-                fax: "888-825-15059",
-                hours: "Monday",
-                mapUrl: "https://www.google.com/maps?q=414+Victoria+Ave+North,+Suite+M11,+Hamilton,+ON+L8L+5G8&output=embed",
-              },
-            ].map((location, idx) => (
+            {CLINIC_LOCATIONS.map((location, idx) => (
               <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                 <Card className="card-refined p-8">
                   <h3 className="text-lg font-bold text-primary mb-4">{location.name}</h3>
@@ -271,7 +316,9 @@ export default function Home() {
                     </div>
                     <div className="flex gap-3">
                       <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
-                      <p>{location.phone}</p>
+                      <a href={location.telHref} className="hover:text-secondary transition-colors">
+                        {location.phone}
+                      </a>
                     </div>
                     <div className="flex gap-3">
                       <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
@@ -704,8 +751,12 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-bold mb-2">Contact</h4>
-              <p className="text-sm">Polyclinic: 416-222-6160 ext 268</p>
-              <p className="text-sm">Wharton: 1-833-962-5359</p>
+              <p className="text-sm">
+                Polyclinic: <a href="tel:+14162226160" className="hover:underline">416-222-6160 ext 268</a>
+              </p>
+              <p className="text-sm">
+                Wharton: <a href="tel:+18339625359" className="hover:underline">1-833-962-5359</a>
+              </p>
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-90">
