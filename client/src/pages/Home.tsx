@@ -250,12 +250,12 @@ export default function Home() {
               },
               {
                 name: "Wharton Medical Clinic",
-                address: "2951 Walker's Line, 1st Floor",
-                city: "Burlington, ON L7M 4Y1",
+                address: "414 Victoria Ave North, Suite M11",
+                city: "Hamilton, ON L8L 5G8",
                 phone: "1-833-962-5359",
                 fax: "888-825-15059",
                 hours: "Monday",
-                mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.5234567890123!2d-79.8!3d43.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d5b5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2s2951%20Walker's%20Line%2C%20Burlington%2C%20ON%20L7M%204Y1!5e0!3m2!1sen!2sca!4v1234567890",
+                mapUrl: "https://www.google.com/maps?q=414+Victoria+Ave+North,+Suite+M11,+Hamilton,+ON+L8L+5G8&output=embed",
               },
             ].map((location, idx) => (
               <div key={idx} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
